@@ -1,0 +1,28 @@
+{
+  "name": "eigenwijs-systeem",
+  "description": "System build for managing student lists and waiting list.",
+  "main": "",
+  "authors": [
+    "Jorrit Meulenbeld"
+  ],
+  "license": "MIT",
+  "keywords": [
+    "user-management",
+    "student-list",
+    "waiting-list"
+  ],
+  "homepage": "n/a",
+  "moduleType": [],
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "polymer": "Polymer/polymer#^1.0.0",
+    "paper-input": "PolymerElements/paper-input#^1.1.10"
+  }
+}
