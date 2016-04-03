@@ -11,9 +11,11 @@ import {NameListService} from '../../shared/services/name-list.service';
   directives: [FORM_DIRECTIVES, CORE_DIRECTIVES]
 })
 export class HomeComponent {
-  newName: string;
-  constructor(public nameListService: NameListService) {}
-
+  private newName: string;
+  private names;
+  constructor(public nameListService: NameListService) {
+    this.names = nameListService.get();
+  }
   /*
    * @param newname  any text as input.
    * @returns return false to prevent default form submit behavior to refresh the page.

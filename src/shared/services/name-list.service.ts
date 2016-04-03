@@ -1,15 +1,17 @@
-export class NameListService {
-  names = [
-    'Edsger Dijkstra',
-    'Donald Knuth',
-    'Alan Turing',
-    'Grace Hopper'
-  ];
+import {FirebaseService, FirebaseArray} from 'ng2-firebase/core';
+import {Injectable} from 'angular2/core';
 
-  get(): string[] {
+@Injectable()
+export class NameListService {
+  names: FirebaseArray<any>;
+  constructor(firebaseService: FirebaseService<any>) {
+    this.names = firebaseService.child('names').asArray();
+  }
+
+  get() {
     return this.names;
   }
-  add(value: string): void {
-    this.names.push(value);
+  add(value: string) : void {
+    this.names.add(value);
   }
 }
